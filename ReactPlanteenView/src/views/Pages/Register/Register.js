@@ -3,8 +3,9 @@ import {Container, Row, Col, CardGroup, Card, CardBlock, CardFooter, Button, Inp
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import {white500, blue500, red500, grey300} from 'material-ui/styles/colors';
-import ActionAndroid from 'material-ui/svg-icons/action/done';
+import ActionDone from 'material-ui/svg-icons/action/done';
 import FontIcon from 'material-ui/FontIcon';
+import DatePicker from 'material-ui/DatePicker';
 
 const styles = {
   errorStyle: {
@@ -54,13 +55,31 @@ class Register extends Component {
                   <h1>REGISTER</h1>
                   <p className="text-white">Create your account</p>
                   <TextField
-                    floatingLabelText="USERNAME"
+                    floatingLabelText="FIRST NAME"
                     floatingLabelStyle={styles.floatingLabelStyle}
                     floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
                     underlineFocusStyle={styles.underlineStyle}
                     floatingLabelFixed={false}
                     errorStyle={styles.errorStyle}
                     type="text"
+                  />
+                  <TextField
+                    floatingLabelText="LAST NAME"
+                    floatingLabelStyle={styles.floatingLabelStyle}
+                    floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
+                    underlineFocusStyle={styles.underlineStyle}
+                    floatingLabelFixed={false}
+                    errorStyle={styles.errorStyle}
+                    type="text"
+                  />
+                  <DatePicker
+                    floatingLabelText="BIRTH DATE"
+                    floatingLabelStyle={styles.floatingLabelStyle}
+                    floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
+                    underlineFocusStyle={styles.underlineStyle}
+                    floatingLabelFixed={false}
+                    errorStyle={styles.errorStyle}
+                    openToYearSelection={true}
                   />
                   <TextField
                     floatingLabelText="EMAIL"
@@ -87,13 +106,12 @@ class Register extends Component {
                     underlineFocusStyle={styles.underlineStyle}
                     type="password"
                   />
-                  {/* <Button color="primary" block>Create Account</Button> */}
 
                 <RaisedButton
                   label="Create Account"
                   labelPosition="before"
                   primary={true}
-                  icon={<ActionAndroid />}
+                  icon={<ActionDone />}
                   fullWidth={true}
                   style={styles.registerButtonStyle}
                 />
